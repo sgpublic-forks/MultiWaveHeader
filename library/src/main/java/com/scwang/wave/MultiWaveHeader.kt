@@ -6,12 +6,14 @@ import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.Interpolator
 import androidx.annotation.ColorRes
 import androidx.core.graphics.ColorUtils
+import androidx.core.view.ViewCompat
 import java.util.*
 import kotlin.math.cos
 import kotlin.math.sin
@@ -140,7 +142,7 @@ open class MultiWaveHeader @JvmOverloads constructor(context: Context, attrs: At
                 canvas.restore()
             }
             if (isRunning) {
-                invalidate()
+                ViewCompat.postInvalidateOnAnimation(this)
             }
         }
     }
