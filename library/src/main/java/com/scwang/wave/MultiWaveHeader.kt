@@ -190,6 +190,9 @@ open class MultiWaveHeader @JvmOverloads constructor(context: Context, attrs: At
                 val args = wave.split("\\s*,\\s*".toRegex())
                 if (args.size == 5) {
                     mltWave.add(Wave(Util.dp2px(args[0].toFloat()), Util.dp2px(args[1].toFloat()), Util.dp2px(args[4].toFloat()), args[2].toFloat(), args[3].toFloat(), mWaveHeight / 2))
+                } else {
+                    //Silently log
+                    Log.e("MultiWaveHeader", "Incorrect Wave String Passed: wave")
                 }
             }
         } else {
