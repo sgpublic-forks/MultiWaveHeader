@@ -25,7 +25,9 @@ class FragmentActivity : AppCompatActivity() {
     //<editor-fold desc=方法">
 
     //@InjectExtra(value = EXTRA_FRAGMENT,remark = "Fragment类名")
-    lateinit var mFragmentClazz: String
+    private val mFragmentClazz: String by lazy {
+        intent.getStringExtra(EXTRA_FRAGMENT)!!
+    }
     private val fragmentClass: Class<*>
         @Throws(ClassNotFoundException::class)
         get() {
@@ -40,7 +42,6 @@ class FragmentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mFragmentClazz = intent.getStringExtra(EXTRA_FRAGMENT)
         val frameLayout = FrameLayout(this)
         frameLayout.id = widget_frame
         setContentView(frameLayout)

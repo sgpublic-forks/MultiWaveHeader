@@ -1,0 +1,34 @@
+[versions]
+agp = "8.2.2"
+kotlin = "1.9.21"
+core-ktx = "1.12.0"
+junit = "4.13.2"
+androidx-test = "1.5.2"
+androidx-appcompat = "1.6.1"
+androidx-constraintlayout = "2.1.4"
+androidx-vectordrawable = "1.1.0"
+espresso-core = "3.5.1"
+material = "1.11.0"
+lobsterpicker = "1.0.1"
+discrete-seekbar = "1.0.1"
+
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidx-test" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-vectordrawable = { group = "androidx.vectordrawable", name = "vectordrawable", version.ref = "androidx-vectordrawable" }
+lobsterpicker = { group = "com.larswerkman", name = "lobsterpicker", version.ref = "lobsterpicker" }
+discrete-seekbar = { group = "org.adw.library", name = "discrete-seekbar", version.ref = "discrete-seekbar" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+

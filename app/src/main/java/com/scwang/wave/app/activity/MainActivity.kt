@@ -1,17 +1,18 @@
 package com.scwang.wave.app.activity
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
-import androidx.appcompat.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
 import com.scwang.wave.app.R
+import com.scwang.wave.app.databinding.ActivityMainBinding
 import com.scwang.wave.app.fragment.WaveConsoleFragment
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.reflect.KClass
 
 class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
+    private val ViewBinding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
 
     enum class Tabs(val menuId: Int, val clazz: KClass<out androidx.fragment.app.Fragment>) {
         WavePair(R.id.navigation_home, WaveConsoleFragment::class),
@@ -21,10 +22,10 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(ViewBinding.root)
 
-        navigation.setOnNavigationItemSelectedListener(this)
-        navigation.selectedItemId = R.id.navigation_home
+        ViewBinding.navigation.setOnNavigationItemSelectedListener(this)
+        ViewBinding.navigation.selectedItemId = R.id.navigation_home
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

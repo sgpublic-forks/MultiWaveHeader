@@ -24,7 +24,11 @@ import kotlin.math.sqrt
  * Created by SCWANG on 2017/12/11.
  */
 @Suppress("unused", "MemberVisibilityCanBePrivate")
-open class MultiWaveHeader @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View(context, attrs, defStyleAttr) {
+open class MultiWaveHeader @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+): View(context, attrs, defStyleAttr) {
     protected var mPath: Path? = null
     protected var mShape: ShapeType = ShapeType.Rect
     protected var mPaint = Paint()
