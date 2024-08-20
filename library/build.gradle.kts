@@ -2,6 +2,10 @@ plugins {
     alias(multiwave.plugins.android.library)
     alias(multiwave.plugins.kotlin.android)
     alias(multiwave.plugins.kotlin.kapt)
+
+    signing
+    `maven-publish`
+    alias(multiwave.plugins.android.publish)
 }
 
 android {

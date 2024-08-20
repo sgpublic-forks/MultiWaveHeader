@@ -25,7 +25,7 @@ MultiWaveHeader 是一个可以高度定制每个波形的Android水波控件。
 
 ![](https://github.com/scwang90/MultiWaveHeader/blob/master/art/png_apk_rqcode.png)
 
-## 每天领红包
+## （原作者）每天领红包
 
 最近开通了支付宝商家，生成了个红包二维码，经常用支付宝的童鞋可有扫码领优惠红包，扫码只会拿红包，不会有任何损失，每天都可以扫码哦！
 
